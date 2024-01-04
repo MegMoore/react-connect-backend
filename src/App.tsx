@@ -18,7 +18,7 @@ function App() {
       .catch((error) => console.error("Error", error));
   });
 
-  const [category, setCatagory] = useState("");
+  //const [category, setCatagory] = useState("");
 
   return (
     <ul>
