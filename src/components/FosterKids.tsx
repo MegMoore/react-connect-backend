@@ -15,13 +15,16 @@ function FosterKids() {
       .then((res) => console.log(res.data))
       .catch((error) => console.error("Error", error));
   });
+    useEffect((fosterKids) => {
+        console.log("Information", fosterKids);
+       
+        
+    })
     
     return (
-        <ul>
-      {fosterKids.map((user) => (
-        <li key={fosterKids.forEach}></li>
-      ))}
-    </ul>
+       <div>
+        Foster Kids
+       </div>
   )
 }
 
