@@ -1,17 +1,14 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 
-interface FosterKids {
-    id: number;
-    firstName: string;
-}
+
 
 function FosterKids() {
-    const [fosterKids, setFosterKids] = useState<FosterKids[]>([]);
+    const [fosterKids, setFosterKids] = useState<fosterKids[]>([]);
   
     useEffect(() =>{
         axios
-      .get<FosterKids[]>("https://localhost:7206/api/fosterKids")
+      .get<fosterKids[]>("https://localhost:7206/api/fosterKids")
       .then((res) => console.log(res.data))
       .catch((error) => console.error("Error", error));
   });
