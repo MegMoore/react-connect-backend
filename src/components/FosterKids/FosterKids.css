@@ -1,0 +1,9 @@
+body {
+    background-color: blue;
+    font: 1rem/1.5 var(--bs-font-sans-serif);
+    color: var(--bs-blue);
+  }
+
+  p {
+    color: blue;
+  }

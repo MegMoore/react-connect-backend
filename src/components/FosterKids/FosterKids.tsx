@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import './FosterKids.css';
 
 interface FosterKid {
   id: number;
@@ -31,11 +32,11 @@ function FosterKids({ fosterKids: initialFosterKids }: FosterKidsProps) {
   }, []);
 
   return (
-    <div>
+    <div className="container text-center">
       <h2>Foster Kids</h2>
       {fosterKids.map((kid) => (
-        <div key={kid.id}>
-          <p>ID: {kid.id}</p>
+        <div key={kid.id} className="row align-items-start">
+          <p className="col">ID: {kid.id}</p>
           <p>First Name: {kid.firstName}</p>
           <p>Last Name: {kid.lastName}</p>
           <p>Sacwis: {kid.sacwis}</p>
