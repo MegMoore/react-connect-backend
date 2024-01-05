@@ -4,7 +4,12 @@ import React, { useEffect, useState } from 'react';
 interface FosterKid {
   id: number;
   firstName: string;
+  lastName: string;
   sacwis: string;
+  genderId: string;
+  dateOfBirth: Date;
+  admissionDate: Date;
+
   // Add other properties as needed
 }
 
@@ -32,7 +37,13 @@ function FosterKids({ fosterKids: initialFosterKids }: FosterKidsProps) {
         <div key={kid.id}>
           <p>ID: {kid.id}</p>
           <p>First Name: {kid.firstName}</p>
+          <p>Last Name: {kid.lastName}</p>
           <p>Sacwis: {kid.sacwis}</p>
+          <p>Gender: {kid.genderId}</p>
+          <p>Date of Birth: {kid.dateOfBirth.toLocaleString()}</p>
+          <p>Admission Date: {kid.admissionDate.toLocaleString()}</p>
+
+
           {/* Add more properties as needed */}
         </div>
       ))}
